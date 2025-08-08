@@ -1,5 +1,5 @@
 (set vim.g.mapleader ",")
-(local keyset vim.keymap.set)
+(local {: keyset} (require :easilok.utils))
 
 ; Move to the next buffer
 (keyset :n :<leader>l #(vim.cmd :bnext)) ;{:silent true})

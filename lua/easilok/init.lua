@@ -3,6 +3,7 @@ local function setup()
   require("easilok.plugins")
   require("easilok.settings")
   require("easilok.ui")
-  return require("easilok.keybindings")
+  require("easilok.keybindings")
+  return require("easilok.lsp")
 end
 return {setup = setup}

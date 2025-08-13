@@ -24,4 +24,8 @@ vim.g.finder_plugin = "telescope"
 vim.o.splitbelow = true
 vim.o.splitright = true
 vim.opt.completeopt = {"menu", "menuone", "noselect"}
+vim.opt.foldlevel = 200
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 return {}

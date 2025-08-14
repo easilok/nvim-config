@@ -14,6 +14,8 @@ local function keyset_leader_space(mode, map, action, opts)
   return keyset(mode, ("<space>" .. map), action, opts)
 end
 if (finder_plugin == "telescope") then
+  vim.api.nvim_create_user_command("GoToFile", builtin.find_files, {nargs = 0, desc = "Open file picker"})
+  vim.api.nvim_create_user_command("GoToCommand", builtin.commands, {nargs = 0, desc = "Open commands picker"})
   keyset("n", "<space><space>", builtin.git_files, {desc = "[F]ind [g]it files"})
   keyset("n", "<C-p>", builtin.find_files, {desc = "[F]ind [f]iles"})
   keyset("n", "<leader>gb", builtin.git_branches, {desc = "[G]it [b]ranches"})

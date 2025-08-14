@@ -26,8 +26,8 @@
 
 (when (= finder-plugin "telescope")
     ;; Set new commands to better name
-    ; vim.cmd([[command! -nargs=0 GoToFile :Telescope find_files]])
-    ; vim.cmd([[command! -nargs=0 GoToCommand :Telescope commands]])
+    (vim.api.nvim_create_user_command "GoToFile" builtin.find_files {:nargs 0 :desc "Open file picker"})
+    (vim.api.nvim_create_user_command "GoToCommand" builtin.commands {:nargs 0 :desc "Open commands picker"})
 
     (keyset :n :<space><space> builtin.git_files { :desc "[F]ind [g]it files"})
     (keyset :n :<C-p> builtin.find_files {:desc "[F]ind [f]iles"})

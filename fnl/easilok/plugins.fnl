@@ -8,7 +8,8 @@
 (Plug "tpope/vim-dispatch")
 (Plug "junegunn/gv.vim")
 
-(Plug "tpope/vim-commentary")
+; Testing out native neovim comment 
+; (Plug "tpope/vim-commentary")
 
 (Plug "tpope/vim-repeat")
 

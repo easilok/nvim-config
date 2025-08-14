@@ -137,6 +137,9 @@
 (Plug "Olical/nfnl")
 (Plug "gpanders/nvim-parinfer")
 
+;; Testing AI plugins
+(Plug "olimorris/codecompanion.nvim")
+
 (vim.call "plug#end")
 
 {}

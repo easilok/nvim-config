@@ -75,5 +75,6 @@ Plug("Olical/conjure")
 Plug("PaterJason/cmp-conjure")
 Plug("Olical/nfnl")
 Plug("gpanders/nvim-parinfer")
+Plug("olimorris/codecompanion.nvim")
 vim.call("plug#end")
 return {}

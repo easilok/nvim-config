@@ -35,6 +35,7 @@ At the moment, this configuration still uses [vim-plug](https://github.com/juneg
 |-------------- utils.fnl                  # Utilitary reusable functions
 |-------------- lsp.fnl                    # Lsp configuration. Includes per filetype configurations.
 |-------------- lsp/<filetype-configs>.fnl # Lsp configurations per filetype
+|-------------- doc/easilok.txt            # Personal configuration documentation for reading inside neovim
 |-- lua/                                   # `fnl` directory transpiled to lua
 |-- after/plugin                           # Plugin configurations picked after it is loads
 |--------------- <plugin>.fnl              # <Plugin> specific configurations in fennel
@@ -42,4 +43,6 @@ At the moment, this configuration still uses [vim-plug](https://github.com/juneg
 |-- after/ftplugin                         # Filetype configurations picked after a file is open
 |--------------- <filetype>.fnl            # <Filetype> specific configurations in fennel
 |--------------- <filetype>.lua            # <Filetype> specific configurations transpiled to lua
+|-- plugin                                 # Custom made personal plugins
+|-- snippets                               # Personal snippets for luasnip
 ```

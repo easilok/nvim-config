@@ -1,7 +1,8 @@
 (local lualine (require :lualine))
 (local bufferline (require :bufferline))
+(local theme (require :easilok.theme))
 
-(lualine.setup { :options { :theme "tokyonight"
+(lualine.setup { :options { :theme theme.theme
                             :powerline_fonts false
                             :component_separators { :left "|" :right "|"}
                             :section_separators { :left "" :right ""}

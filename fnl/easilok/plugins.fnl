@@ -75,6 +75,7 @@
 
 (Plug "folke/tokyonight.nvim" {:branch "main"})
 (Plug "srt0/codescope.nvim")
+(Plug "shaunsingh/nord.nvim")
 
 ; Prettier
 (Plug "sbdchd/neoformat")

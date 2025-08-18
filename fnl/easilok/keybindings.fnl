@@ -47,8 +47,9 @@
 ; nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 ; nnoremap <Leader>S :%s/\<<C-r><C-w>\>//g<Left><Left>
 ;; TODO: Not working, pattern not found
-(keyset :n :<Leader>s #(vim.cmd "%s/\\<<C-r><C-w>\\>/"))
-(keyset :n :<Leader>S #(vim.cmd "%s/\\<<C-r><C-w>\\>//g<Left><Left>"))
+(keyset :n :<Leader>s ":%s/\\<<C-r><C-w>\\>/")
+(keyset :n :<Leader>S ":%s/\\<<C-r><C-w>\\>//g<Left><Left>")
+
 
 ; Reselect pasted text
 (keyset :n :gp "`[v`]")

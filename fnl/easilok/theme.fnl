@@ -44,4 +44,6 @@
 ; define line highlight color
 (vim.api.nvim_set_hl 0 "LineHighlight" {:ctermbg :darkgray :bg :darkgray})
 
+(vim.api.nvim_set_hl 0 "WinSeparator" {:fg "#ff9c33"})
+
 {: theme}

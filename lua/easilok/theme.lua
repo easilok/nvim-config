@@ -22,4 +22,5 @@ vim.api.nvim_set_hl(0, "CursorLineNr", {fg = "#ff9c33"})
 vim.api.nvim_set_hl(0, "LineNrAbove", {fg = "#9b9b9b"})
 vim.api.nvim_set_hl(0, "LineNrBelow", {fg = "#9b9b9b"})
 vim.api.nvim_set_hl(0, "LineHighlight", {ctermbg = "darkgray", bg = "darkgray"})
+vim.api.nvim_set_hl(0, "WinSeparator", {fg = "#ff9c33"})
 return {theme = theme}

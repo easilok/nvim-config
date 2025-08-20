@@ -1,2 +1,2 @@
-(set vim.opt.spell true)
+(set vim.opt_local.spell true)
 

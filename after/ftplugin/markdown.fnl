@@ -1,7 +1,7 @@
 (local {: keyset} (require :easilok.utils))
 
-(set vim.opt.spell true)
-(set vim.opt.tw 120)
+(set vim.opt_local.spell true)
+(set vim.opt_local.tw 120)
 
 ; syntax match mdUnckeck "\v- \[ \].*$"
 ; syntax match mdCheck "\v- \[x\].*$"
@@ -15,5 +15,5 @@
 ; highlight link mdDone Comment
 
 (keyset :n :<leader>mt #(vim.cmd "RenderMarkdownToggle"))
-(set vim.opt.conceallevel 2)
+(set vim.opt_local.conceallevel 2)
 

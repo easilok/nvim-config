@@ -48,12 +48,16 @@ keyset("n", "<space>gp", _11_)
 local function _12_()
   return vim.cmd("Git log -50 --oneline")
 end
-keyset("n", "gh", _12_, {desc = "[G]it Log [H]istory"})
+keyset("n", "<space>gh", _12_, {desc = "[G]it Log [H]istory"})
 local function _13_()
+  return vim.cmd(("Git log -50 --oneline --follow -- " .. vim.fn.expand("%")))
+end
+keyset("n", "<space>fh", _13_, {desc = "[G]it [L]og file"})
+local function _14_()
   return vim.cmd("Git")
 end
-keyset("n", "g<cr>", _13_, {desc = "[G]it"})
-local function _14_()
+keyset("n", "g<cr>", _14_, {desc = "[G]it"})
+local function _15_()
   return vim.cmd("Git blame")
 end
-return keyset("n", "gb", _14_, {desc = "[G]it [B]lame"})
+return keyset("n", "gb", _15_, {desc = "[G]it [B]lame"})

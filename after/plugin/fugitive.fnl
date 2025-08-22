@@ -17,6 +17,7 @@
 (keyset :n :<space>gg #(vim.cmd "Git"))
 (keyset :n :<space>gf #(fugitive-and-run "Git fetch --all"))
 (keyset :n :<space>gp #(vim.cmd "Git push"))
-(keyset :n :gh #(vim.cmd "Git log -50 --oneline") { :desc "[G]it Log [H]istory"})
+(keyset :n :<space>gh #(vim.cmd "Git log -50 --oneline") { :desc "[G]it Log [H]istory"})
+(keyset :n :<space>fh #(vim.cmd (.. "Git log -50 --oneline --follow -- " (vim.fn.expand "%"))) { :desc "[G]it [L]og file"})
 (keyset :n :g<cr> #(vim.cmd "Git") { :desc "[G]it"})
 (keyset :n :gb #(vim.cmd "Git blame") { :desc "[G]it [B]lame"})

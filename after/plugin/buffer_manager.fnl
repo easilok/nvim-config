@@ -1,8 +1,8 @@
 (local {: keyset} (require :easilok.utils))
 (local buffer-manager (require :buffer_manager))
 
-(buffer-manager.setup { :show_indicators true
-                        :width (math.min (math.floor (* vim.o.columns 0.5)) 100)
+(buffer-manager.setup { :show_indicators "before"
+                        :width (math.min (math.floor (* vim.o.columns 0.5) 200))
                         :height (math.min (math.floor (* vim.o.lines 0.5)) 20)})
 
 

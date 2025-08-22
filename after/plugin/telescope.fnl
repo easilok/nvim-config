@@ -9,9 +9,13 @@
   
 (telescope.setup {  :defaults {  :prompt_prefix " >"
                                  :color_devicons true
-                                 :layout_strategy "vertical"
+                                 :border true
+                                 :sorting_strategy "ascending"
+                                 :layout_strategy "bottom_pane"
                                  :layout_config
-                                 { :vertical { :width 0.8 :prompt_position "bottom"}}
+                                 { :width 0.5
+                                   :prompt_position "top"
+                                   :vertical {:prompt_position "bottom" }}
                                  :mappings
                                  { :i 
                                    { "<C-t>" action_layout.cycle_layout_next}

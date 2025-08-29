@@ -94,7 +94,7 @@
 
 ; Markdown
 (Plug "instant-markdown/vim-instant-markdown" {:for ["markdown" "wiki"] :do "npm install"})
-(Plug "MeanderingProgrammer/render-markdown.nvim")
+; (Plug "MeanderingProgrammer/render-markdown.nvim")
 (Plug "godlygeek/tabular")
 
 (Plug "mbbill/undotree")

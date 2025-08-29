@@ -7,8 +7,6 @@ vim.g.instant_markdown_mathjax = 1
 vim.g.instant_markdown_mermaid = 1
 vim.g.instant_markdown_theme = "dark"
 vim.g.instant_markdown_browser = "firefox --new-window"
-local render_markdown = require("render-markdown")
-render_markdown.setup({code = {width = "block", right_pad = 1, inline_right = "`", inline_left = "`", sign = false}, heading = {icons = {}, sign = false}, pipe_table = {enabled = false}, checkbox = {enabled = false}})
 local function markdown_table_format()
   return vim.cmd("Tabularize\\|")
 end

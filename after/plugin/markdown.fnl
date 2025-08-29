@@ -17,18 +17,19 @@
 (set vim.g.instant_markdown_browser "firefox --new-window")
  
 ;; Render markdown in buffer
-(local render-markdown (require "render-markdown"))
-(render-markdown.setup { :code {
-                                :sign false
-                                :width "block"
-                                :right_pad 1
-                                :inline_right "`"
-                                :inline_left "`"}
-                          :heading { :sign false
-                                     :icons []}
-                          :pipe_table { :enabled false}
-                          :checkbox  { :enabled false}})
-    
+; (local render-markdown (require "render-markdown"))
+; (render-markdown.setup { :code {
+;                                 :sign false
+;                                 :width "block"
+;                                 :right_pad 1
+;                                 :inline_right "`"
+;                                 :inline_left "`"}
+;                           :heading { :enabled false 
+;                                      :sign false
+;                                      :icons []}
+;                           :pipe_table { :enabled false}
+;                           :checkbox  { :enabled false}
+;                           :bullet  { :enabled true}})
 
 
 (fn markdown-table-format []

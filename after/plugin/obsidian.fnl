@@ -25,7 +25,14 @@
                        :preferred_link_style "markdown"
                        :disable_frontmatter true
                        :mappings { :<space>ch { :action (fn [] (obsidian.util.toggle_checkbox))
-                                                :opts { :buffer true}}}})
+                                                :opts { :buffer true}}}
+                       :ui { :checkboxes {  " " nil
+                                            "x" nil
+                                            ">" nil
+                                            "~" nil
+                                            "!" nil}
+                             :bullets {:char "-" :hl_group "ObsidianBullet"}}})
+
     (keyset :n :<space>ow #(vim.cmd "ObsidianWorkspace") { :desc "Switch [O]bsidian [W]orkspace"})
     (keyset :n :<space>oq #(vim.cmd "ObsidianQuickSwitch") { :desc "Switch [O]bsidian [Q]uick Switch"})
     (keyset :n :<space>og #(vim.cmd "ObsidianSearch") { :desc "Switch [O]bsidian Search"}))

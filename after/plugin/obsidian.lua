@@ -7,7 +7,7 @@ if not (vim.fn.isdirectory(vim.fn.expand(base_dir)) == 0) then
   local function _2_()
     return obsidian.util.toggle_checkbox()
   end
-  obsidian.setup({workspaces = {{name = "work", path = (base_dir .. "/Work")}, {name = "personal", path = (base_dir .. "/Personal")}, {name = "knowledge", path = (base_dir .. "/Knowledge"), overrides = {templates = {folder = "99 - templates", date_format = "%Y-%m-%d", time_format = "%H:%M"}}}}, daily_notes = {folder = "journal", date_format = "%Y-%m-%d", default_tags = {"journal"}, template = nil}, templates = {folder = "templates", date_format = "%Y-%m-%d", time_format = "%H:%M"}, preferred_link_style = "markdown", disable_frontmatter = true, mappings = {["<space>ch"] = {action = _2_, opts = {buffer = true}}}})
+  obsidian.setup({workspaces = {{name = "work", path = (base_dir .. "/Work")}, {name = "personal", path = (base_dir .. "/Personal")}, {name = "knowledge", path = (base_dir .. "/Knowledge"), overrides = {templates = {folder = "99 - templates", date_format = "%Y-%m-%d", time_format = "%H:%M"}}}}, daily_notes = {folder = "journal", date_format = "%Y-%m-%d", default_tags = {"journal"}, template = nil}, templates = {folder = "templates", date_format = "%Y-%m-%d", time_format = "%H:%M"}, preferred_link_style = "markdown", disable_frontmatter = true, mappings = {["<space>ch"] = {action = _2_, opts = {buffer = true}}}, ui = {checkboxes = {[" "] = nil, x = nil, [">"] = nil, ["~"] = nil, ["!"] = nil}, bullets = {char = "-", hl_group = "ObsidianBullet"}}})
   local function _3_()
     return vim.cmd("ObsidianWorkspace")
   end

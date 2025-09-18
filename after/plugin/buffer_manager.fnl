@@ -2,8 +2,8 @@
 (local buffer-manager (require :buffer_manager))
 
 (buffer-manager.setup { :show_indicators "before"
-                        :width (math.min (math.floor (* vim.o.columns 0.5) 200))
-                        :height (math.min (math.floor (* vim.o.lines 0.5)) 20)})
+                        :width 0.9
+                        :height 0.5})
 
 
 (keyset :n :<C-e>

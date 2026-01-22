@@ -1,6 +1,6 @@
-; (local theme "tokyonight")
+(local theme "tokyonight")
 ;; (local theme  "codescope")
-(local theme "nord")
+; (local theme "nord")
 
 (local tokyonight-settings {
                             ;; The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`

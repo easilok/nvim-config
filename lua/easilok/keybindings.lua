@@ -1,7 +1,7 @@
 -- [nfnl] fnl/easilok/keybindings.fnl
 vim.g.mapleader = ","
 local _local_1_ = require("easilok.utils")
-local keyset = _local_1_["keyset"]
+local keyset = _local_1_.keyset
 local function _2_()
   return vim.cmd("bnext")
 end
@@ -23,8 +23,8 @@ local function close_buffer()
   vim.cmd("bp")
   return vim.cmd("bd #")
 end
-keyset("n", "<leader>bq", close_buffer)
-keyset("n", "<space>bq", close_buffer)
+keyset("n", "<leader>bd", close_buffer)
+keyset("n", "<space>bd", close_buffer)
 local function _6_()
   return vim.cmd({cmd = "bd", bang = true})
 end

@@ -28,17 +28,17 @@
                                             (set vim.opt.relativenumber false))
                                 :group (vim.api.nvim_create_augroup :custom-term-open { :clear true})})
 (keyset :t :<esc><esc> "<c-\\><c-n>")
-(keyset :n :<space>tt M.open_term_split {:desc "[T]erminal toggle on split"})
-(keyset :n :<space>to (fn [] (M.open_term_split true))
+(keyset :n :<space>ot M.open_term_split {:desc "[T]erminal toggle on split"})
+(keyset :n :<space>oT (fn [] (M.open_term_split true))
                 {:desc "[T]erminal [o]pen detached on split"})
-(keyset :n :<space>ti (fn []
-                        (set state.current_command (vim.fn.input "Command: ")))
-                {:desc "[T]erminal [i]nput command"})
-(keyset :n :<space>tx
-                (fn []
-                  (when (= state.current_command "")
-                    (set state.current_command (vim.fn.input "Command: ")))
-                  (vim.fn.chansend state.job_id
-                                   [(.. state.current_command "\r\n")]))
-                {:desc "[T]erminal e[x]exute command"})
-M
+; (keyset :n :<space>ti (fn []
+;                         (set state.current_command (vim.fn.input "Command: ")))
+;                 {:desc "[T]erminal [i]nput command"})
+; (keyset :n :<space>tx
+;                 (fn []
+;                   (when (= state.current_command "")
+;                     (set state.current_command (vim.fn.input "Command: ")))
+;                   (vim.fn.chansend state.job_id
+;                                    [(.. state.current_command "\r\n")]))
+;                 {:desc "[T]erminal e[x]exute command"})
+; M

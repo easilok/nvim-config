@@ -9,7 +9,7 @@
                              "<M-v>"   "actions.select_vsplit"}})
      (keyset "" "<F7>" oil.open { :desc "Open Oil file browser"})
      (keyset "" "<M-p>" oil.open { :desc "Open Oil file browser"})
-     (keyset :n "-" oil.open { :desc "Open Oil file browser"}))
+     (keyset :n "<space>o-" oil.open { :desc "Open Oil file browser"}))
     (do
       (keyset "" "<F7>" #(vim.cmd "Explore") { :desc "Open Netrw file browser"})
-      (keyset :n "-" #(vim.cmd "Explore") { :desc "Open Netrw file browser"})))
+      (keyset :n "<space>o-" #(vim.cmd "Explore") { :desc "Open Netrw file browser"})))

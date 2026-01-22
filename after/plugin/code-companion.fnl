@@ -30,7 +30,8 @@
                                                                   :model "claude-sonnet-4-20250514"}}
                                                     :inline { :adapter "anthropic"
                                                                 :model "claude-sonnet-4-20250514"}
-                                    :adapters { :openrouter create-openrouter-adapter}})
+                                    :adapters { :http { :openrouter create-openrouter-adapter}
+                                                :acp { :openrouter create-openrouter-adapter}}})
 
         (keyset :n :<space>cc #(vim.call "CodeCompanionChat toggle" {:desc "Toggle CodeCompanion"}))
         (keyset :v :<space>ca #(vim.call "CodeCompanionAsk") {:desc "Ask about selected code"})

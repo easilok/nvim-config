@@ -1,6 +1,6 @@
 -- [nfnl] after/plugin/code-companion.fnl
 local _local_1_ = require("easilok.utils")
-local keyset = _local_1_["keyset"]
+local keyset = _local_1_.keyset
 local available_models = {"google/gemini-2.5-pro", "google/gemini-2.5-flash-preview-05-20", "anthropic/claude-sonnet-4", "anthropic/claude-3.7-sonnet", "openai/gpt-4o-mini"}
 local current_model = "openai/gpt-4o-mini"
 local function select_model()
@@ -20,7 +20,7 @@ local function create_openrouter_adapter()
 end
 local ok, codecompanion = pcall(require, "codecompanion")
 if ok then
-  codecompanion.setup({telescope_integration = true, lsp_integration = true, strategies = {chat = {adapter = "anthropic", model = "claude-sonnet-4-20250514"}}, inline = {adapter = "anthropic", model = "claude-sonnet-4-20250514"}, adapters = {openrouter = create_openrouter_adapter}})
+  codecompanion.setup({telescope_integration = true, lsp_integration = true, strategies = {chat = {adapter = "anthropic", model = "claude-sonnet-4-20250514"}}, inline = {adapter = "anthropic", model = "claude-sonnet-4-20250514"}, adapters = {http = {openrouter = create_openrouter_adapter}, acp = {openrouter = create_openrouter_adapter}}})
   local function _4_()
     return vim.call("CodeCompanionChat toggle", {desc = "Toggle CodeCompanion"})
   end

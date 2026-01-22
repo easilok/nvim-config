@@ -1,5 +1,5 @@
 -- [nfnl] fnl/easilok/theme.fnl
-local theme = "nord"
+local theme = "tokyonight"
 local tokyonight_settings
 local function _1_(colors)
   colors.border = "#ff9c33"

@@ -15,7 +15,7 @@
                                  :layout_config
                                  { :width 0.5
                                    :prompt_position "top"
-                                   :vertical {:prompt_position "bottom" }}
+                                   :vertical {:prompt_position "bottom"}}
                                  :mappings
                                  { :i 
                                    { "<C-t>" action_layout.cycle_layout_next}
@@ -38,23 +38,22 @@
 
     (keyset :n :<leader>gb builtin.git_branches { :desc "[G]it [b]ranches"})
     (keyset :n :<leader>gc builtin.git_commits { :desc "[G]it [c]ommits"})
-    (keyset :n :<leader>fh builtin.help_tags { :desc "[F]ind [h]elp files"})
-    (keyset :n :<leader>gr builtin.lsp_references { :desc "[G]rep [r]eferences"})
-    (keyset :n :<space>th builtin.help_tags { :desc "[T]elescope [h]elp files"})
-    (keyset :n :<space>we builtin.diagnostics { :desc "[G]rep diagnostics"})
-    (keyset :n :<space>lds builtin.lsp_document_symbols { :desc "[L]sp [D]ocument [S]ymbols"})
-    (keyset :n :<space>lws builtin.lsp_dynamic_workspace_symbols { :desc "[L]sp [W]orkspace [S]ymbols"})
+    (keyset :n :<leader>cr builtin.lsp_references { :desc "[C]ode [r]eferences"})
+    (keyset :n :<space>hc builtin.help_tags { :desc "[T]elescope [h]elp files"})
+    (keyset :n :<space>ce builtin.diagnostics { :desc "[C]ode diagnostics [e]rrors"})
+    (keyset :n :<space>cds builtin.lsp_document_symbols { :desc " [C]ode [D]ocument [S]ymbols"})
+    (keyset :n :<space>cws builtin.lsp_dynamic_workspace_symbols { :desc "[C]ode [W]orkspace [S]ymbols"})
     (keyset :n :<space>ft builtin.tags { :desc "[F]ind [T]ags"})
-    (keyset :n :<space>tr builtin.resume { :desc "[T]elescope [r]esume"})
-    (keyset :n :<space>tk builtin.keymaps { :desc "[T]elescope [k]eymaps"})
+    (keyset :n :<space>hr builtin.resume { :desc "[H]elp [r]esume"})
+    (keyset :n :<space>hk builtin.keymaps { :desc "[H]help [k]eymaps"})
 
     (keyset-leader-space :n :? builtin.oldfiles { :desc "[?] Find recently opened files"})
     (keyset-leader-space :n :fg builtin.git_files { :desc "[F]ind [g]it files"})
     (keyset-leader-space :n :ff builtin.find_files { :desc "[F]ind [f]iles"})
-    (keyset-leader-space :n :gs (fn [] (builtin.grep_string { :search (vim.fn.input "Grep For > ")}) { :desc "[G]rep [s]earch"}))
-    (keyset-leader-space :n :gw (fn [] (builtin.grep_string { :search (vim.fn.expand "<cword>") }) { :desc "[G]rep current [w]ord"}))
+    (keyset-leader-space :n :sp (fn [] (builtin.grep_string { :search (vim.fn.input "Grep For > ")}) { :desc "[G]rep [s]earch"}))
+    (keyset-leader-space :n :sw (fn [] (builtin.grep_string { :search (vim.fn.expand "<cword>") }) { :desc "[G]rep current [w]ord"}))
     (keyset-leader-space :n :bl builtin.buffers { :desc "[B]uffer [l]ist"})
-    (keyset-leader-space :n :gl builtin.live_grep { :desc "[G]rep [l]ive"})
+    (keyset-leader-space :n :sl builtin.live_grep { :desc "[G]rep [l]ive"})
     (keyset-leader-space :n :fb (fn [] (builtin.current_buffer_fuzzy_find { :sorting_strategy "ascending" }) { :desc "[F]ind [b]uffer text"}))
     (keyset-leader-space :n :be (fn [] (builtin.diagnostics { :bufnr 0 }) { :desc "[B]uffer diagnostics"}))
 
@@ -65,4 +64,4 @@
             (vim.fn.setreg :v {})
             (builtin.grep_string {:search (string.gsub text "\n" "")})))
 
-    (keyset-leader-space :v :gs grep_visual_selection { :desc "[G]rep visual [s]earch"}))
+    (keyset-leader-space :v :sv grep_visual_selection { :desc "[G]rep visual [s]earch"}))

@@ -1,6 +1,6 @@
 -- [nfnl] after/plugin/telescope.fnl
 local _local_1_ = require("easilok.utils")
-local keyset = _local_1_["keyset"]
+local keyset = _local_1_.keyset
 local finder_plugin = (vim.g["finder-plugin"] or "telescope")
 local telescope = require("telescope")
 local action_layout = require("telescope.actions.layout")
@@ -20,15 +20,14 @@ if (finder_plugin == "telescope") then
   keyset("n", "<C-p>", builtin.find_files, {desc = "[F]ind [f]iles"})
   keyset("n", "<leader>gb", builtin.git_branches, {desc = "[G]it [b]ranches"})
   keyset("n", "<leader>gc", builtin.git_commits, {desc = "[G]it [c]ommits"})
-  keyset("n", "<leader>fh", builtin.help_tags, {desc = "[F]ind [h]elp files"})
-  keyset("n", "<leader>gr", builtin.lsp_references, {desc = "[G]rep [r]eferences"})
-  keyset("n", "<space>th", builtin.help_tags, {desc = "[T]elescope [h]elp files"})
-  keyset("n", "<space>we", builtin.diagnostics, {desc = "[G]rep diagnostics"})
-  keyset("n", "<space>lds", builtin.lsp_document_symbols, {desc = "[L]sp [D]ocument [S]ymbols"})
-  keyset("n", "<space>lws", builtin.lsp_dynamic_workspace_symbols, {desc = "[L]sp [W]orkspace [S]ymbols"})
+  keyset("n", "<leader>cr", builtin.lsp_references, {desc = "[C]ode [r]eferences"})
+  keyset("n", "<space>hc", builtin.help_tags, {desc = "[T]elescope [h]elp files"})
+  keyset("n", "<space>ce", builtin.diagnostics, {desc = "[C]ode diagnostics [e]rrors"})
+  keyset("n", "<space>cds", builtin.lsp_document_symbols, {desc = " [C]ode [D]ocument [S]ymbols"})
+  keyset("n", "<space>cws", builtin.lsp_dynamic_workspace_symbols, {desc = "[C]ode [W]orkspace [S]ymbols"})
   keyset("n", "<space>ft", builtin.tags, {desc = "[F]ind [T]ags"})
-  keyset("n", "<space>tr", builtin.resume, {desc = "[T]elescope [r]esume"})
-  keyset("n", "<space>tk", builtin.keymaps, {desc = "[T]elescope [k]eymaps"})
+  keyset("n", "<space>hr", builtin.resume, {desc = "[H]elp [r]esume"})
+  keyset("n", "<space>hk", builtin.keymaps, {desc = "[H]help [k]eymaps"})
   keyset_leader_space("n", "?", builtin.oldfiles, {desc = "[?] Find recently opened files"})
   keyset_leader_space("n", "fg", builtin.git_files, {desc = "[F]ind [g]it files"})
   keyset_leader_space("n", "ff", builtin.find_files, {desc = "[F]ind [f]iles"})
@@ -36,14 +35,14 @@ if (finder_plugin == "telescope") then
     builtin.grep_string({search = vim.fn.input("Grep For > ")})
     return {desc = "[G]rep [s]earch"}
   end
-  keyset_leader_space("n", "gs", _2_)
+  keyset_leader_space("n", "sp", _2_)
   local function _3_()
     builtin.grep_string({search = vim.fn.expand("<cword>")})
     return {desc = "[G]rep current [w]ord"}
   end
-  keyset_leader_space("n", "gw", _3_)
+  keyset_leader_space("n", "sw", _3_)
   keyset_leader_space("n", "bl", builtin.buffers, {desc = "[B]uffer [l]ist"})
-  keyset_leader_space("n", "gl", builtin.live_grep, {desc = "[G]rep [l]ive"})
+  keyset_leader_space("n", "sl", builtin.live_grep, {desc = "[G]rep [l]ive"})
   local function _4_()
     builtin.current_buffer_fuzzy_find({sorting_strategy = "ascending"})
     return {desc = "[F]ind [b]uffer text"}
@@ -60,7 +59,7 @@ if (finder_plugin == "telescope") then
     vim.fn.setreg("v", {})
     return builtin.grep_string({search = string.gsub(text, "\n", "")})
   end
-  return keyset_leader_space("v", "gs", grep_visual_selection, {desc = "[G]rep visual [s]earch"})
+  return keyset_leader_space("v", "sv", grep_visual_selection, {desc = "[G]rep visual [s]earch"})
 else
   return nil
 end

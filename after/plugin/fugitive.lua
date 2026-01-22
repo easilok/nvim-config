@@ -1,6 +1,6 @@
 -- [nfnl] after/plugin/fugitive.fnl
 local _local_1_ = require("easilok.utils")
-local keyset = _local_1_["keyset"]
+local keyset = _local_1_.keyset
 local function _2_()
   return vim.cmd("Gvdiff")
 end
@@ -54,10 +54,6 @@ local function _13_()
 end
 keyset("n", "<space>fh", _13_, {desc = "[G]it [L]og file"})
 local function _14_()
-  return vim.cmd("Git")
-end
-keyset("n", "g<cr>", _14_, {desc = "[G]it"})
-local function _15_()
   return vim.cmd("Git blame")
 end
-return keyset("n", "gb", _15_, {desc = "[G]it [B]lame"})
+return keyset("n", "<space>gb", _14_, {desc = "[G]it [B]lame"})

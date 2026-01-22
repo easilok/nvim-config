@@ -1,6 +1,6 @@
 -- [nfnl] plugin/easiterm.fnl
 local _local_1_ = require("easilok.utils")
-local keyset = _local_1_["keyset"]
+local keyset = _local_1_.keyset
 local M = {}
 local state = {current_command = "", job_id = 0, term_buf = ( - 1)}
 M.open_term_split = function(detach)
@@ -33,22 +33,8 @@ local function _5_()
 end
 vim.api.nvim_create_autocmd("TermOpen", {callback = _5_, group = vim.api.nvim_create_augroup("custom-term-open", {clear = true})})
 keyset("t", "<esc><esc>", "<c-\\><c-n>")
-keyset("n", "<space>tt", M.open_term_split, {desc = "[T]erminal toggle on split"})
+keyset("n", "<space>ot", M.open_term_split, {desc = "[T]erminal toggle on split"})
 local function _6_()
   return M.open_term_split(true)
 end
-keyset("n", "<space>to", _6_, {desc = "[T]erminal [o]pen detached on split"})
-local function _7_()
-  state.current_command = vim.fn.input("Command: ")
-  return nil
-end
-keyset("n", "<space>ti", _7_, {desc = "[T]erminal [i]nput command"})
-local function _8_()
-  if (state.current_command == "") then
-    state.current_command = vim.fn.input("Command: ")
-  else
-  end
-  return vim.fn.chansend(state.job_id, {(state.current_command .. "\r\n")})
-end
-keyset("n", "<space>tx", _8_, {desc = "[T]erminal e[x]exute command"})
-return M
+return keyset("n", "<space>oT", _6_, {desc = "[T]erminal [o]pen detached on split"})

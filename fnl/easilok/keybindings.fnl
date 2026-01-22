@@ -17,8 +17,8 @@
   (vim.cmd :bp)
   (vim.cmd "bd #"))
 
-(keyset :n :<leader>bq close-buffer) ;{:silent true})
-(keyset :n :<space>bq close-buffer) ;{:silent true})
+(keyset :n :<leader>bd close-buffer) ;{:silent true})
+(keyset :n :<space>bd close-buffer) ;{:silent true})
 ; Force close of current buffer
 (keyset :n :<leader>bk #(vim.cmd { :cmd "bd" :bang true})) ;{:silent true})
 (keyset :n :<space>bk #(vim.cmd { :cmd "bd" :bang true})) ;{:silent true})

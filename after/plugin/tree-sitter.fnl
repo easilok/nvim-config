@@ -1,5 +1,5 @@
 (local {: keyset} (require :easilok.utils))
-(local treesitter (require :nvim-treesitter.configs))
+(local treesitter (require :nvim-treesitter))
 (local context (require :treesitter-context))
 
 (local language-parsers [ "bash"
@@ -37,8 +37,9 @@
                           "vue"
                           "yaml"])
 
-(treesitter.setup { :ensure_installed language-parsers
-                    :highlight { :enable true :additional_vim_regex_highlighting false}})
+(treesitter.install language-parsers)
+; (treesitter.setup { :ensure_installed language-parsers
+;                     :highlight { :enable true :additional_vim_regex_highlighting false}})
 
 
 (context.setup { :enable true

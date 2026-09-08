@@ -43,7 +43,7 @@
 (Plug "nvim-treesitter/nvim-treesitter" {:do ":TSUpdate"})
 (Plug "nvim-treesitter/nvim-treesitter-context")
 (Plug "nvim-treesitter/nvim-treesitter-textobjects")
-; (Plug "nvim-treesitter/playground")
+(Plug "nvim-treesitter/playground")
 (Plug "https://gitlab.com/HiPhish/rainbow-delimiters.nvim.git")
 
 (Plug "folke/which-key.nvim")
@@ -136,7 +136,7 @@
 
 ;; Fennel
 (Plug "Olical/nfnl")
-(Plug "gpanders/nvim-parinfer")
+;; (Plug "gpanders/nvim-parinfer")
 
 ;; Testing AI plugins
 (Plug "olimorris/codecompanion.nvim")

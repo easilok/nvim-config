@@ -46,3 +46,6 @@ At the moment, this configuration still uses [vim-plug](https://github.com/juneg
 |-- plugin                                 # Custom made personal plugins
 |-- snippets                               # Personal snippets for luasnip
 ```
+
+- [ ] Hello y
+- [x] Hello k

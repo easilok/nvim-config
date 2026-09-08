@@ -41,7 +41,7 @@
 
 ;; folding
 
-(set vim.opt.foldlevel 200)
+(set vim.opt.foldlevel 999)
 (set vim.opt.foldmethod "expr")
 (set vim.opt.foldexpr "nvim_treesitter#foldexpr()")
 (set vim.opt.foldexpr "v:lua.vim.treesitter.foldexpr()")
